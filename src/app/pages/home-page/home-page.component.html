@@ -15,6 +15,8 @@
       <tr>
         <th>Avatar</th>
         <th>Login</th>
+        <th>Type</th>
+        <th>Is Admin</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +28,12 @@
             </td>
             <td>
               {{ profile.login }}
+            </td>
+            <td>
+              {{ profile.type }}
+            </td>
+            <td>
+              {{ profile.site_admin }}
             </td>
           </tr>
         }
