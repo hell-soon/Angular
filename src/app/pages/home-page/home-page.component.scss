@@ -1,0 +1,40 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  &-search {
+    display: flex;
+    gap: 10px;
+
+    button,
+    input {
+      background-color: unset;
+      padding: 5px;
+      border: 1px solid #584cfd;
+      border-radius: 20px;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

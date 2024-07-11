@@ -1,0 +1,39 @@
+<section class="container block">
+  <div class="block-search">
+    <input
+      type="text"
+      [(ngModel)]="query"
+      (ngModelChange)="onQueryChange($event)"
+      placeholder="Search profiles"
+    />
+
+    <button (click)="updateQuery(query)">Обновить список</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Login</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (profiles.length > 0) {
+        @for (profile of profiles; track profile.id) {
+          <tr>
+            <td>
+              <img [src]="profile.avatar_url" [alt]="profile.login" />
+            </td>
+            <td>
+              {{ profile.login }}
+            </td>
+          </tr>
+        }
+      } @else {
+        <tr>
+          <td colspan="2">No profiles found</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</section>
